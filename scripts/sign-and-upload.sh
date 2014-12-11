@@ -48,19 +48,19 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 # echo "Upload finished"
 #fi
 
-#if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
-#echo ""
-#echo "***************************"
-#echo "* Uploading to Hockeyapp  *"
-#echo "***************************"
-#curl  \
-#-F "status=2" \
-#-F "notify=0" \
-#-F "notes=$RELEASE_NOTES" \
-#-F "notes_type=0" \
-#-F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
-#-F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
-#-H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
-#https://rink.hockeyapp.net/api/2/apps/upload
-#echo "Upload finish"
-#fi
+f [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
+echo ""
+echo "***************************"
+echo "* Uploading to Hockeyapp  *"
+echo "***************************"
+curl  \
+-F "status=2" \
+-F "notify=0" \
+-F "notes=$RELEASE_NOTES" \
+-F "notes_type=0" \
+-F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
+-F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
+-H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
+https://rink.hockeyapp.net/api/2/apps/upload
+echo "Upload finish"
+fi
