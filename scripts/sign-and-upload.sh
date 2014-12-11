@@ -63,4 +63,4 @@ fi
 -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
 #https://rink.hockeyapp.net/api/2/apps/upload
 #echo "Upload finish"
-fi
+#fi
