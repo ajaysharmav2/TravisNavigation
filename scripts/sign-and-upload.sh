@@ -48,23 +48,36 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 # echo "Upload finished"
 #fi
 
-HOCKEY_APP_ID="a3cd182b137aed43d6f092c0b259544a"
-HOCKEY_APP_TOKEN="759fb41a1d2e440e98d10d0cb022cbe2"
-echo "*        Testing for HockeyApp          *"
+#HOCKEY_APP_ID="a3cd182b137aed43d6f092c0b259544a"
+#HOCKEY_APP_TOKEN="759fb41a1d2e440e98d10d0cb022cbe2"
+#echo "*        Testing for HockeyApp          *"
+#
+#if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
+#echo ""
+#echo "***************************"
+#echo "* Uploading to Hockeyapp  *"
+#echo "***************************"
+#curl  \
+#-F "status=2" \
+#-F "notify=0" \
+#-F "notes=$RELEASE_NOTES" \
+#-F "notes_type=0" \
+#-F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
+#-F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
+#-H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
+#https://rink.hockeyapp.net/api/2/apps/upload
+#echo "Upload finish"
+#fi
 
-if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
-echo ""
-echo "***************************"
-echo "* Uploading to Hockeyapp  *"
-echo "***************************"
-curl  \
--F "status=2" \
--F "notify=0" \
--F "notes=$RELEASE_NOTES" \
--F "notes_type=0" \
--F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
--F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
--H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
-https://rink.hockeyapp.net/api/2/apps/upload
-echo "Upload finish"
-fi
+PERSONAL_API_KEY="48e3e7b0a88401321dc222000ac44c54"
+RELEASE_TITLE="UberTestersDemo1.0"
+
+curl
+-X POST
+http://beta.ubertesters.com/api/client/upload_build.json
+-H "X-UbertestersApiKey:$PERSONAL_API_KEY"
+-F "file=@$OUTPUTDIR/$APP_NAME.ipa"
+-F "title=$RELEASE_TITLE"
+-F "notes=$RELEASE_NOTES"
+-F "status=in_progress"
+-F "stop_previous=true"
