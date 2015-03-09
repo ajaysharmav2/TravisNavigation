@@ -50,7 +50,7 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
 HOCKEY_APP_ID="a3cd182b137aed43d6f092c0b259544a"
 HOCKEY_APP_TOKEN="759fb41a1d2e440e98d10d0cb022cbe2"
-
+echo "*        Testing for HockeyApp          *"
 
 if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
 echo ""
