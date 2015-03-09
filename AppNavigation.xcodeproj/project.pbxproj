@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003890A01AADED0F004D42A2 /* UbertestersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0038909F1AADED0E004D42A2 /* UbertestersSDK.framework */; };
+		003890A21AADED70004D42A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890A11AADED70004D42A2 /* AudioToolbox.framework */; };
+		003890A41AADED93004D42A2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890A31AADED93004D42A2 /* AdSupport.framework */; };
+		003890A61AADEDC8004D42A2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890A51AADEDC8004D42A2 /* CoreLocation.framework */; };
+		003890A81AADEDF1004D42A2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890A71AADEDF1004D42A2 /* CoreMotion.framework */; };
+		003890AA1AADEE08004D42A2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890A91AADEE08004D42A2 /* CoreTelephony.framework */; };
+		003890AC1AADEE86004D42A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890AB1AADEE86004D42A2 /* QuartzCore.framework */; };
+		003890AE1AADEE90004D42A2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890AD1AADEE90004D42A2 /* CoreImage.framework */; };
+		003890B01AADEE9E004D42A2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890AF1AADEE9E004D42A2 /* SystemConfiguration.framework */; };
+		003890B21AADEEB6004D42A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890B11AADEEB6004D42A2 /* OpenGLES.framework */; };
 		3F2AFFA0ADA828D6A0F6EFC4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6200860071DB77891D11E04C /* libPods.a */; };
 		868A12481A396C3A008CB924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A12471A396C3A008CB924 /* Foundation.framework */; };
 		868A124A1A396C40008CB924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A12491A396C40008CB924 /* UIKit.framework */; };
@@ -38,6 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0038909F1AADED0E004D42A2 /* UbertestersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbertestersSDK.framework; sourceTree = "<group>"; };
+		003890A11AADED70004D42A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		003890A31AADED93004D42A2 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		003890A51AADEDC8004D42A2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		003890A71AADEDF1004D42A2 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		003890A91AADEE08004D42A2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		003890AB1AADEE86004D42A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		003890AD1AADEE90004D42A2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		003890AF1AADEE9E004D42A2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		003890B11AADEEB6004D42A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6200860071DB77891D11E04C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A12471A396C3A008CB924 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		868A12491A396C40008CB924 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -73,7 +93,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003890B21AADEEB6004D42A2 /* OpenGLES.framework in Frameworks */,
+				003890B01AADEE9E004D42A2 /* SystemConfiguration.framework in Frameworks */,
+				003890AE1AADEE90004D42A2 /* CoreImage.framework in Frameworks */,
+				003890AC1AADEE86004D42A2 /* QuartzCore.framework in Frameworks */,
+				003890AA1AADEE08004D42A2 /* CoreTelephony.framework in Frameworks */,
+				003890A81AADEDF1004D42A2 /* CoreMotion.framework in Frameworks */,
+				003890A61AADEDC8004D42A2 /* CoreLocation.framework in Frameworks */,
+				003890A41AADED93004D42A2 /* AdSupport.framework in Frameworks */,
+				003890A21AADED70004D42A2 /* AudioToolbox.framework in Frameworks */,
 				868A124C1A396C47008CB924 /* CoreGraphics.framework in Frameworks */,
+				003890A01AADED0F004D42A2 /* UbertestersSDK.framework in Frameworks */,
 				868A124A1A396C40008CB924 /* UIKit.framework in Frameworks */,
 				868A12481A396C3A008CB924 /* Foundation.framework in Frameworks */,
 				3F2AFFA0ADA828D6A0F6EFC4 /* libPods.a in Frameworks */,
@@ -93,6 +123,15 @@
 		67BC5294054F749C5F7B1D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				003890B11AADEEB6004D42A2 /* OpenGLES.framework */,
+				003890AF1AADEE9E004D42A2 /* SystemConfiguration.framework */,
+				003890AD1AADEE90004D42A2 /* CoreImage.framework */,
+				003890AB1AADEE86004D42A2 /* QuartzCore.framework */,
+				003890A91AADEE08004D42A2 /* CoreTelephony.framework */,
+				003890A71AADEDF1004D42A2 /* CoreMotion.framework */,
+				003890A51AADEDC8004D42A2 /* CoreLocation.framework */,
+				003890A31AADED93004D42A2 /* AdSupport.framework */,
+				003890A11AADED70004D42A2 /* AudioToolbox.framework */,
 				6200860071DB77891D11E04C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -101,6 +140,7 @@
 		868A124D1A396C58008CB924 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0038909F1AADED0E004D42A2 /* UbertestersSDK.framework */,
 				868A124B1A396C47008CB924 /* CoreGraphics.framework */,
 				868A12491A396C40008CB924 /* UIKit.framework */,
 				868A12471A396C3A008CB924 /* Foundation.framework */,
@@ -459,6 +499,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppNavigation",
+				);
 				INFOPLIST_FILE = AppNavigation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,6 +518,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppNavigation",
+				);
 				INFOPLIST_FILE = AppNavigation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
