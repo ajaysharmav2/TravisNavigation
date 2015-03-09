@@ -72,12 +72,22 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 PERSONAL_API_KEY="48e3e7b0a88401321dc222000ac44c54"
 RELEASE_TITLE="UberTestersDemo1.0"
 
-curl
--X POST
+#curl
+#-X POST
+#http://beta.ubertesters.com/api/client/upload_build.json
+#-H "X-UbertestersApiKey:$PERSONAL_API_KEY"
+#-F "file=@$OUTPUTDIR/$APP_NAME.ipa"
+#-F "title=$RELEASE_TITLE"
+#-F "notes=$RELEASE_NOTES"
+#-F "status=in_progress"
+#-F "stop_previous=true"
+
+curl  \
+-F "file=@$OUTPUTDIR/$APP_NAME.ipa" \
+-F "title=$RELEASE_TITLE" \
+-F "notes=$RELEASE_NOTES" \
+-F "status=in_progress" \
+-F "stop_previous=true" \
+-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
 http://beta.ubertesters.com/api/client/upload_build.json
--H "X-UbertestersApiKey:$PERSONAL_API_KEY"
--F "file=@$OUTPUTDIR/$APP_NAME.ipa"
--F "title=$RELEASE_TITLE"
--F "notes=$RELEASE_NOTES"
--F "status=in_progress"
--F "stop_previous=true"
+
