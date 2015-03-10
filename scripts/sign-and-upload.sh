@@ -72,39 +72,40 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 #{"title":"Travis Test","bundle_identifier":"com.travis.travisnavigation","public_identifier":"a3cd182b137aed43d6f092c0b259544a","platform":"iOS","release_type":0,"custom_release_type":null,"created_at":"2015-03-02T09:11:57Z","updated_at":"2015-03-09T14:48:23Z","featured":false,"id":150444,"config_url":"https://rink.hockeyapp.net/manage/apps/150444/app_versions/2","public_url":"https://rink.hockeyapp.net/apps/a3cd182b137aed43d6f092c0b259544a","minimum_os_version":"7.0","device_family":"iPhone/iPod","status":2,"owner":"Backup Data","owner_token":"368b1383c024a45f61476ee1371b26494137c339"}
 
 PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
-RELEASE_TITLE="UberTestersDemo1.0"
-
-#curl
-#-X POST
-#http://beta.ubertesters.com/api/client/upload_build.json
-#-H "X-UbertestersApiKey:$PERSONAL_API_KEY"
-#-F "file=@$OUTPUTDIR/$APP_NAME.ipa"
-#-F "title=$RELEASE_TITLE"
-#-F "notes=$RELEASE_NOTES"
-#-F "status=in_progress"
-#-F "stop_previous=true"
-
-
-#echo "***************************"
-#echo "* Uploading to UberTesters  *"
-#echo "***************************"
-#curl  \
-#-F "file=@$OUTPUTDIR/$APP_NAME.ipa" \
-#-F "title=$RELEASE_TITLE" \
-#-F "notes=$RELEASE_NOTES" \
-#-F "status=in_progress" \
-#-F "stop_previous=true" \
-#-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
-#http://beta.ubertesters.com/api/client/upload_build.json
-#echo "Upload finish"
-
+RELEASE_TITLE="UberTestersDemo2.0"
 
 
 echo "***************************"
 echo "* Uploading to UberTesters  *"
 echo "***************************"
-curl http://beta.ubertesters.com/api/client/upload_build.json \
+curl  http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+-F title="$RELEASE_TITLE" \
+-F notes="$RELEASE_NOTES" \
+-F status="in_progress" \
+-F stop_previous="true" \
 -H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
+
 echo "Upload finish"
+
+
+
+#echo "***************************"
+#echo "* Uploading to UberTesters  *"
+#echo "***************************"
+#curl http://beta.ubertesters.com/api/client/upload_build.json \
+#-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+#-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
+#echo "Upload finish"
+#
+#***************************
+#
+#* Uploading to UberTesters *
+#
+#***************************
+#
+#{"success":true,"revision":{"platform":"iOS","application_id":"com.travis.travisnavigation","build_number":"1","created_at":"2015-03-10T08:06:38Z","title":"","notes":null,"size":1986631,"sdk_version":70,"min_os_version":"7.0","target_os_version":null,"project":"V2Demo Ubertesters / DemoUbertesters","status":"In progress","started_at":"2015-03-10T08:06:40Z","notify":true,"distribution_groups":[],"stop_previous":false}}curl: (6) Could not resolve host: echo
+#
+#curl: (6) Could not resolve host: Upload finish
+
 
