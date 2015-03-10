@@ -105,6 +105,6 @@ echo "* Uploading to UberTesters  *"
 echo "***************************"
 curl http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
--F api_token="$PERSONAL_API_KEY" \
+-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
 echo "Upload finish"
 
