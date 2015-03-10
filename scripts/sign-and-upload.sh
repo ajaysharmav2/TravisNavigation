@@ -103,9 +103,8 @@ RELEASE_TITLE="UberTestersDemo1.0"
 echo "***************************"
 echo "* Uploading to UberTesters  *"
 echo "***************************"
-curl
--F "file=@$OUTPUTDIR/$APP_NAME.ipa"
--H "X-UbertestersApiKey:$PERSONAL_API_KEY"
-http://beta.ubertesters.com/api/client/upload_build.json
+curl http://beta.ubertesters.com/api/client/upload_build.json \
+-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+-F api_token="$PERSONAL_API_KEY" \
 echo "Upload finish"
 
