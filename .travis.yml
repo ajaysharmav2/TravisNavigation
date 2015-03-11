@@ -14,10 +14,8 @@ before_script:
 - ./scripts/add-key.sh
 - ./scripts/update-bundle.sh
 script:
-- xcodebuild test -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk
-  iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xcodebuild -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphonesimulator
-  ONLY_ACTIVE_ARCH=NO
+#- xcodebuild test -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#- xcodebuild -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - xcodebuild -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphoneos
   -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 after_success:
