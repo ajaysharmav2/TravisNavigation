@@ -86,7 +86,7 @@ curl  http://beta.ubertesters.com/api/client/upload_build.json \
 -F stop_previous="true" \
 -H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
 
-echo "Upload finish"
+echo "*****  Upload finish *****"
 
 
 
