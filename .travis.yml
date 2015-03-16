@@ -5,16 +5,16 @@ only:
 - master
 
 before_install:
-#- chmod +x scripts/travis-config.sh
+- chmod +x scripts/travis-config.sh
 - chmod +x scripts/add-key.sh
 - chmod +x scripts/remove-key.sh
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
-#- ./scripts/travis-config.sh
+- ./scripts/travis-config.sh
 #- cp ./scripts/travis-config.sh travis-config.sh
 - echo "Testing Branches Nitesh"
-- echo $APP_NAME
+- echo $MY_NAME
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/AppNavigation_Ad_Hoc.mobileprovision.enc
   -d -a -out scripts/profile/AppNavigation_Ad_Hoc.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a

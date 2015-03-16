@@ -8,10 +8,11 @@
 #!/bin/sh
 
 # Standard app config
-export APP_NAME="AppNavigation"
-export DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"
-export PROFILE_NAME="AppNavigation_Ad_Hoc"
+#export APP_NAME="AppNavigation"
+#export DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"
+#export PROFILE_NAME="AppNavigation_Ad_Hoc"
 
+export MY_NAME="Nitesh"
 
 #
 #- APP_NAME="AppNavigation"
