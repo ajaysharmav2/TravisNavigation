@@ -7,19 +7,6 @@
 #  Copyright (c) 2014 ___v2Tech Ventures___. All rights reserved.
 #!/bin/sh
 
-
-require 'yaml'
-config = YAML.load_file('.travis.yml')
-
-attribute = true # your attribute to check here
-
-if attribute
-puts config['Nitesh']['12-March-2015']
-else
-puts config['Meshram']['15-March-2015']
-end
-
-
 # Create a custom keychain
 security create-keychain -p travis ios-build.keychain
 
