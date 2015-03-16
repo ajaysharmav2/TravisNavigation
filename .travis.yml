@@ -11,6 +11,7 @@ before_install:
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
+- cp travis-config.sh config.sh
 - echo "Testing Branches Nitesh"
 - echo $branches
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/AppNavigation_Ad_Hoc.mobileprovision.enc
