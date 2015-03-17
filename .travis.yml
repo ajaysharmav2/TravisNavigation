@@ -11,7 +11,8 @@ before_install:
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
-- ./scripts/travis-config.sh
+#- ./scripts/travis-config.sh
+. ./script/travis-config.sh
 #- cp ./scripts/travis-config.sh travis-config.sh
 
 - echo $APP_NAME
@@ -24,7 +25,6 @@ before_script:
   -out scripts/certs/dist.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a
   -out scripts/certs/dist.p12
-#- ./scripts/travis-config.sh
 - ./scripts/add-key.sh
 - ./scripts/update-bundle.sh
 script:
