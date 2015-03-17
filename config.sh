@@ -8,7 +8,7 @@
 #!/bin/sh
 
 # Standard app config
-export APP_NAME="AppNavigation"
+export MY_NAME="My Name is Nitesh"
 #export DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"
 #export PROFILE_NAME="AppNavigation_Ad_Hoc"
 

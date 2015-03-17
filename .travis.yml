@@ -16,12 +16,14 @@ env:
 
 
 before_install:
+- chmod +x config.sh
 - chmod +x scripts/add-key.sh
 - chmod +x scripts/remove-key.sh
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
-- echo $APP_NAME
+- . ./config.sh
+- echo $MY_NAME
 
 - echo "Testing Branches Nitesh"
 
