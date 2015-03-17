@@ -13,8 +13,11 @@ before_install:
 before_script:
 - ./scripts/travis-config.sh
 #- cp ./scripts/travis-config.sh travis-config.sh
+
+- echo $APP_NAME
+
 - echo "Testing Branches Nitesh"
-- echo $MY_NAME
+
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/AppNavigation_Ad_Hoc.mobileprovision.enc
   -d -a -out scripts/profile/AppNavigation_Ad_Hoc.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a
@@ -35,7 +38,7 @@ after_script:
 - ./scripts/remove-key.sh
 env:
   global:
-  - APP_NAME="AppNavigation"
+#- APP_NAME="AppNavigation"
   - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
   - PROFILE_NAME="AppNavigation_Ad_Hoc"
   - secure: bJ1sFGf/q3CxKbYcVwOti+TVwokrcgJ5PVfDpgugeAEPNyweBux4cWI6YvLp1WJIO0velz9WjWwKcQLHIb+wDF9uzoT1OHeMjTsMSEYxm+pGdQmOvZHbfFFw3Jaw3KqjIefRK+SCRMgfS2uwxLNzuz7N8immstVNLIeYFZ6AUYY=
