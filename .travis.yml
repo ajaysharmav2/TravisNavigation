@@ -5,14 +5,16 @@ only:
 - master
 
 before_install:
-- chmod +x scripts/travis-config.sh
+- chmod +x scripts/config.sh
 - chmod +x scripts/add-key.sh
 - chmod +x scripts/remove-key.sh
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
 #- ./scripts/travis-config.sh
-. ./script/travis-config.sh
+. ./script/config.sh
+
+#. ./config.sh
 #- cp ./scripts/travis-config.sh travis-config.sh
 
 - echo $APP_NAME
