@@ -6,7 +6,7 @@ only:
 
 env:
   global:
-  - APP_NAME="AppNavigation"
+#- APP_NAME="AppNavigation"
   - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
   - PROFILE_NAME="AppNavigation_Ad_Hoc"
   - secure: bJ1sFGf/q3CxKbYcVwOti+TVwokrcgJ5PVfDpgugeAEPNyweBux4cWI6YvLp1WJIO0velz9WjWwKcQLHIb+wDF9uzoT1OHeMjTsMSEYxm+pGdQmOvZHbfFFw3Jaw3KqjIefRK+SCRMgfS2uwxLNzuz7N8immstVNLIeYFZ6AUYY=
@@ -23,7 +23,7 @@ before_install:
 - chmod +x scripts/sign-and-upload.sh
 before_script:
 - . ./config.sh
-- echo $MY_NAME
+- echo $APP_NAME
 
 - echo "Testing Branches Nitesh"
 
