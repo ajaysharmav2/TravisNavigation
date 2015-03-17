@@ -71,8 +71,8 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
 #{"title":"Travis Test","bundle_identifier":"com.travis.travisnavigation","public_identifier":"a3cd182b137aed43d6f092c0b259544a","platform":"iOS","release_type":0,"custom_release_type":null,"created_at":"2015-03-02T09:11:57Z","updated_at":"2015-03-09T14:48:23Z","featured":false,"id":150444,"config_url":"https://rink.hockeyapp.net/manage/apps/150444/app_versions/2","public_url":"https://rink.hockeyapp.net/apps/a3cd182b137aed43d6f092c0b259544a","minimum_os_version":"7.0","device_family":"iPhone/iPod","status":2,"owner":"Backup Data","owner_token":"368b1383c024a45f61476ee1371b26494137c339"}
 
-PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
-RELEASE_TITLE="UberTestersDemo2.0"
+#PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
+RELEASE_TITLE="UberTestersDemo4.0"
 
 
 echo "***************************"
