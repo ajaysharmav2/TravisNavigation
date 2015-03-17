@@ -11,7 +11,7 @@ before_install:
 - chmod +x scripts/update-bundle.sh
 - chmod +x scripts/sign-and-upload.sh
 before_script:
-. ./config.sh
+- ./config.sh
 
 - echo $APP_NAME
 
