@@ -18,6 +18,7 @@
 		003890B01AADEE9E004D42A2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890AF1AADEE9E004D42A2 /* SystemConfiguration.framework */; };
 		003890B21AADEEB6004D42A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003890B11AADEEB6004D42A2 /* OpenGLES.framework */; };
 		00C6EA171AB8025800F3C2AE /* config.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00C6EA161AB8025800F3C2AE /* config.sh */; };
+		00C7842C1AB9839100EA5643 /* pivotal.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00C7842B1AB9839100EA5643 /* pivotal.sh */; };
 		3F2AFFA0ADA828D6A0F6EFC4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6200860071DB77891D11E04C /* libPods.a */; };
 		868A12481A396C3A008CB924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A12471A396C3A008CB924 /* Foundation.framework */; };
 		868A124A1A396C40008CB924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A12491A396C40008CB924 /* UIKit.framework */; };
@@ -60,6 +61,7 @@
 		003890AF1AADEE9E004D42A2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		003890B11AADEEB6004D42A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		00C6EA161AB8025800F3C2AE /* config.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.sh; sourceTree = "<group>"; };
+		00C7842B1AB9839100EA5643 /* pivotal.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = pivotal.sh; path = scripts/pivotal.sh; sourceTree = "<group>"; };
 		6200860071DB77891D11E04C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A12471A396C3A008CB924 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		868A12491A396C40008CB924 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -153,6 +155,7 @@
 		86B130CA1A388445007AC2F4 = {
 			isa = PBXGroup;
 			children = (
+				00C7842B1AB9839100EA5643 /* pivotal.sh */,
 				00C6EA161AB8025800F3C2AE /* config.sh */,
 				86A46C261A389566003346B6 /* .travis.yml */,
 				86A46C281A38957D003346B6 /* add-key.sh */,
@@ -317,6 +320,7 @@
 				86A46C2D1A38957D003346B6 /* remove-key.sh in Resources */,
 				86A46C2E1A38957D003346B6 /* sign-and-upload.sh in Resources */,
 				86B130E51A388445007AC2F4 /* Main.storyboard in Resources */,
+				00C7842C1AB9839100EA5643 /* pivotal.sh in Resources */,
 				86A46C2F1A38957D003346B6 /* update-bundle.sh in Resources */,
 				86A46C2C1A38957D003346B6 /* add-key.sh in Resources */,
 				86B130EA1A388445007AC2F4 /* LaunchScreen.xib in Resources */,
