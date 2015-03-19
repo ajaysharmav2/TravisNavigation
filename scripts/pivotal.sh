@@ -22,7 +22,8 @@ QUERY_STRING='with_label=$LABEL_ID&fields=current_state%2Ccomments'
 echo "***************************"
 echo "* pivotaltracker  *"
 echo "***************************"
-curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=b104&fields=current_state%2Ccomments \
+curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?fields=current_state%2Ccomments \
+-d '{"id":"b104"}'
 -H "X-TrackerToken: $TOKEN" \
 
 echo "*****  pivotaltracker *****"
