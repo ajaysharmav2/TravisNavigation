@@ -15,15 +15,20 @@ PROJECT_ID=1114232
 
 QUERY='b108'
 LABEL_ID='b104'
+
+QUERY_STRING='with_label=$LABEL_ID&fields=current_state%2Ccomments'
+
+echo $QUERY_STRING
+
 echo "***************************"
 echo "* pivotaltracker  *"
 echo "***************************"
-curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/search?query=label%3A$QUERY \
+curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?QUERY_STRING \
 -H "X-TrackerToken: $TOKEN" \
 
 echo "*****  pivotaltracker *****"
 
-
+#https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$(LABEL_ID)&fields=current_state%2Ccomments
 #curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/search?query=label%3A$QUERY \
 
 #curl -X GET -H "X-TrackerToken: cf9391f2af5a2b68da2755a27bce2bff" "https://www.pivotaltracker.com/services/v5/projects/1114232/search?query=label%3Aapi interaction"
