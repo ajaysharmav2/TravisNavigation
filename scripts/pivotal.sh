@@ -18,12 +18,11 @@ LABEL_ID='b104'
 
 QUERY_STRING='with_label=$LABEL_ID&fields=current_state%2Ccomments'
 
-echo $QUERY_STRING
 
 echo "***************************"
 echo "* pivotaltracker  *"
 echo "***************************"
-curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?QUERY_STRING \
+curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=b104&fields=current_state%2Ccomments \
 -H "X-TrackerToken: $TOKEN" \
 
 echo "*****  pivotaltracker *****"
