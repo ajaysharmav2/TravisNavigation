@@ -18,10 +18,11 @@ LABEL_ID='b104'
 echo "***************************"
 echo "* pivotaltracker  *"
 echo "***************************"
-curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$LABEL_ID&fields=current_state%2Ccomments \
+curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/search?query=label%3A$QUERY \
 -H "X-TrackerToken: $TOKEN" \
 
 echo "*****  pivotaltracker *****"
+
 
 #curl  https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/search?query=label%3A$QUERY \
 
