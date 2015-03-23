@@ -7,8 +7,8 @@ only:
 
 
 before_install:
-- chmod +x scripts/jq
-- sudo cp jq scripts/jq /usr/local/bin
+- chmod +x ./scripts/jq
+- sudo cp jq ./scripts/jq /usr/local/bin
 - chmod +x scripts/Get_All_Pivotal_Comments.sh
 
 before_script:
