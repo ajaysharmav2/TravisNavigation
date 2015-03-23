@@ -16,6 +16,8 @@ curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "
 
 chmod +x $OUTPUT_FILE_NAME
 
+echo "Show all the comments \n"
+
 cat $OUTPUT_FILE_NAME | jq '.[] .comments [].text'
 
 #cat json.txt | jq '.[0] .comments[0].text'
