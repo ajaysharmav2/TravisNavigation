@@ -7,11 +7,13 @@ only:
 
 
 before_install:
-- chmod +x scripts/pivotal.sh
+- chmod +x scripts/jq
+- sudo cp jq /usr/local/bin
+- chmod +x scripts/Get_All_Pivotal_Comments.sh
 
 before_script:
 
-- ./scripts/pivotal.sh
+- ./scripts/Get_All_Pivotal_Comments.sh
 
 script:
 
