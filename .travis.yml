@@ -11,6 +11,9 @@ before_install:
 #- sudo cp ./scripts/jq /usr/local/bin
 
 - chmod +x scripts/download_jq_framwork.sh
+
+- ./scripts/download_jq_framwork.sh
+
 - chmod +x scripts/Get_All_Pivotal_Comments.sh
 
 
