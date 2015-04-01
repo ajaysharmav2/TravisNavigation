@@ -19,12 +19,12 @@ echo "Nitesh Working directory \n"
 
 pwd
 
-mkdir /home/jqparser
+#mkdir /home/jqparser
 
-sudo cp ./jq /home/jqparser
+sudo cp ./jq pwd
 
 
 
 
 echo "Chaning permission of JSON Framework \n"
-chmod +x /home/jqparser/jq
+chmod +x pwd/jq
