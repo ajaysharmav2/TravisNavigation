@@ -15,6 +15,10 @@ curl --header 'Host: stedolan.github.io' --header 'Accept: text/html,application
 echo "Moving JSON Framework \n"
 #sudo cp ./jq /usr/local/bin
 
+echo "Nitesh Working directory \n"
+
+pwd
+
 mkdir /home/jqparser
 
 sudo cp ./jq /home/jqparser
