@@ -18,4 +18,4 @@ sudo cp ./jq /usr/local/bin
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 
-chmod +x ./jq
+chmod +x /usr/local/bin/jq
