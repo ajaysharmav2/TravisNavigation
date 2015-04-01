@@ -19,7 +19,7 @@ chmod +x $OUTPUT_FILE_NAME
 
 echo "Show all the comments \n"
 
-cat $OUTPUT_FILE_NAME | ./jq '.[] .comments [].text'
+cat $OUTPUT_FILE_NAME | /home/jqparser/jq '.[] .comments [].text'
 
 #cat json.txt | jq '.[0] .comments[0].text'
 
