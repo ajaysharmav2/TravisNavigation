@@ -21,5 +21,7 @@ echo "Show all the comments \n"
 
 cat $OUTPUT_FILE_NAME | /usr/bin/jq '.[] .comments [].text'
 
+
+
 #cat json.txt | jq '.[0] .comments[0].text'
 
