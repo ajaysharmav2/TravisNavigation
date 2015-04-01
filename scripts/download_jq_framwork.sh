@@ -17,6 +17,6 @@ chmod +x $JQ_OUTPUTDIR/jq
 
 # Moving JSON Framework
 echo "Moving JSON Framework \n"
-sudo cp $JQ_OUTPUTDIR/ /usr/bin/
+sudo cp $JQ_OUTPUTDIR/jq /usr/bin/
 
 
