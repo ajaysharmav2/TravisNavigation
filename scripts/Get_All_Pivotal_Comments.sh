@@ -12,6 +12,7 @@ export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
 export LABEL_ID='b104'
 export OUTPUT_FILE_NAME='jsonrespone.text'
 
+
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?date_format=millis&fields=current_state%2Ccomments&with_label=$LABEL_ID" -o $OUTPUT_FILE_NAME
 
 chmod +x $OUTPUT_FILE_NAME
