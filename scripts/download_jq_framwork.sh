@@ -15,6 +15,6 @@ chmod +x ./jq
 
 # Moving JSON Framework
 echo "Moving JSON Framework \n"
-sudo cp ./scripts/jq /usr/local/bin
+sudo cp ./jq /usr/local/bin
 
 
