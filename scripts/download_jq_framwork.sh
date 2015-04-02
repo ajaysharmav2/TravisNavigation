@@ -17,6 +17,8 @@ ls
 
 echo "************************************ "
 
+echo pwd
+
 echo "Downloading JSON Framework \n"
 
 
@@ -33,6 +35,9 @@ echo "************************************ "
 ls
 
 echo "************************************ "
+
+echo pwd
+
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 chmod +x $JQ_OUTPUTDIR/jq
