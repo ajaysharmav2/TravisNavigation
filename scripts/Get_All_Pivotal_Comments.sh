@@ -46,6 +46,8 @@ cat $PWD/$OUTPUT_FILE_NAME | /usr/local/bin/jq '.[] .comments [].text'
 echo "type 3"
 cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
 
+
+
 #cat $OUTPUT_FILE_NAME | "$PWD/jq" '.[] .comments [].text'
 
 
