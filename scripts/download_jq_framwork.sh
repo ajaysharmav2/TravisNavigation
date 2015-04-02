@@ -17,7 +17,7 @@ ls
 
 echo "************************************ "
 
-echo PWD
+echo $JQ_OUTPUTDIR
 
 echo "Downloading JSON Framework \n"
 
@@ -36,7 +36,7 @@ ls
 
 echo "************************************ "
 
-echo PWD
+echo $JQ_OUTPUTDIR
 
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
@@ -44,6 +44,6 @@ chmod +x $JQ_OUTPUTDIR/jq
 
 # Moving JSON Framework
 echo "Moving JSON Framework \n"
-sudo cp $JQ_OUTPUTDIR/jq /usr/bin/
+#sudo cp $JQ_OUTPUTDIR/jq /usr/bin/
 
 
