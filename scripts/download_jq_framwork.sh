@@ -17,7 +17,7 @@ ls
 
 echo "************************************ "
 
-echo pwd
+echo PWD
 
 echo "Downloading JSON Framework \n"
 
@@ -36,7 +36,7 @@ ls
 
 echo "************************************ "
 
-echo pwd
+echo PWD
 
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
