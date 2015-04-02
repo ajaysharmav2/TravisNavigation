@@ -40,13 +40,13 @@ echo $JQ_OUTPUTDIR
 
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
-chmod +x $JQ_OUTPUTDIR/jq
+chmod 777 $JQ_OUTPUTDIR/jq
 
 ls -la
 
 
 # Moving JSON Framework
 #echo "Moving JSON Framework \n"
-#sudo cp $JQ_OUTPUTDIR/jq /usr/bin/
+sudo cp $JQ_OUTPUTDIR/jq /usr/local/bin/
 
 
