@@ -47,10 +47,10 @@ chmod +x $JQ_OUTPUTDIR/jq
 #chmod 777 $JQ_OUTPUTDIR/jq
 
 ls -la
-
-
-# Moving JSON Framework
-echo "Moving JSON Framework \n"
-sudo cp $JQ_OUTPUTDIR/jq /usr/local/bin/
-
+#
+#
+## Moving JSON Framework
+#echo "Moving JSON Framework \n"
+#sudo cp $JQ_OUTPUTDIR/jq /usr/local/bin/
+#
 
