@@ -18,9 +18,9 @@ echo $JQ_OUTPUTDIR
 
 echo "PWD - GetAll Script"
 
-echo PWD
-
-echo $PWD
+#echo PWD
+#
+#echo $PWD
 
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?date_format=millis&fields=current_state%2Ccomments&with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
@@ -30,21 +30,21 @@ echo "Show all the comments \n"
 
 #cat $PWD/$OUTPUT_FILE_NAME 
 
-echo "Parse text file"
+#echo "Parse text file"
 
-ls -la
-
-echo "type 1"
+#ls -la
+#
+#echo "type 1"
 cat $PWD/$OUTPUT_FILE_NAME | ./jq '.[] .comments [].text'
 
 
-echo "type 2"
-
-cat $PWD/$OUTPUT_FILE_NAME | /usr/local/bin/jq '.[] .comments [].text'
-
-
-echo "type 3"
-cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
+#echo "type 2"
+#
+#cat $PWD/$OUTPUT_FILE_NAME | /usr/local/bin/jq '.[] .comments [].text'
+#
+#
+#echo "type 3"
+#cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
 
 
 
