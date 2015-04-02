@@ -19,7 +19,7 @@ chmod +x $OUTPUT_FILE_NAME
 
 echo "Show all the comments \n"
 
-cat $OUTPUT_FILE_NAME | $JQ_OUTPUTDIR/jq '.[] .comments [].text'
+cat $OUTPUT_FILE_NAME | /Users/travis/build/ajaysharmav2/TravisNavigation/jq '.[] .comments [].text'
 
 
 
