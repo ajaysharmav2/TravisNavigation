@@ -15,6 +15,13 @@ export OUTPUT_FILE_NAME='jsonrespone.text'
 echo "JQ Path"
 echo $JQ_OUTPUTDIR
 
+
+echo "PWD - GetAll Script"
+
+echo PWD
+
+echo $PWD
+
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?date_format=millis&fields=current_state%2Ccomments&with_label=$LABEL_ID" -o $OUTPUT_FILE_NAME
 
 chmod +x $OUTPUT_FILE_NAME
