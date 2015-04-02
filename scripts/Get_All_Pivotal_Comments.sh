@@ -7,12 +7,20 @@
 #  Copyright (c) 2014 ___v2Tech Ventures___. All rights reserved.
 #!/bin/sh
 
+
+
 export PROJECT_ID=1114232
 export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-export LABEL_ID='b199'
+export LABEL_ID=''
 export OUTPUT_FILE_NAME='jsonrespone.text'
 
 export ALL_COMMENTS='allcomments.text'
+
+
+if [ ! -z "$INFO_PLIST" ]; then
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $LABEL_ID" "$INFO_PLIST"
+echo "Set CFBundleVersion to $LABEL_ID"
+fi
 
 echo "JQ Path"
 echo $JQ_OUTPUTDIR
@@ -40,6 +48,9 @@ echo "Show all the comments \n"
 cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
 
 #cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
+
+
+echo "All Filtered Commands"
 
 cat $ALL_COMMENTS | awk -F "[" '{print $2}'
 
