@@ -32,7 +32,7 @@ echo "Nitesh List of Directory \n "
 
 
 echo "************************************ "
-ls -la
+
 
 echo "************************************ "
 
@@ -41,6 +41,8 @@ echo $JQ_OUTPUTDIR
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 chmod +x $JQ_OUTPUTDIR/jq
+
+ls -la
 
 # Moving JSON Framework
 echo "Moving JSON Framework \n"
