@@ -9,8 +9,10 @@
 
 export PROJECT_ID=1114232
 export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-export LABEL_ID='b104'
+export LABEL_ID='b199'
 export OUTPUT_FILE_NAME='jsonrespone.text'
+
+export ALL_COMMENTS='allcomments.text'
 
 echo "JQ Path"
 echo $JQ_OUTPUTDIR
@@ -35,5 +37,9 @@ echo "Show all the comments \n"
 #ls -la
 #
 #echo "type 1"
-cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
+cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
+
+#cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
+
+cat $ALL_COMMENTS | awk -F "[" '{print $2}'
 
