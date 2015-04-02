@@ -28,7 +28,10 @@ chmod +x $OUTPUT_FILE_NAME
 
 echo "Show all the comments \n"
 
-cat $OUTPUT_FILE_NAME | "$PWD/jq" '.[] .comments [].text'
+cat $OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
+
+#cat $OUTPUT_FILE_NAME | "$PWD/jq" '.[] .comments [].text'
+
 
 
 
