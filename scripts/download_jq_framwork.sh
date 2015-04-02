@@ -46,7 +46,7 @@ ls -la
 
 
 # Moving JSON Framework
-#echo "Moving JSON Framework \n"
+echo "Moving JSON Framework \n"
 sudo cp $JQ_OUTPUTDIR/jq /usr/local/bin/
 
 
