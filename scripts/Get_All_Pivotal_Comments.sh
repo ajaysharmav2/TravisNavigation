@@ -28,11 +28,13 @@ curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "
 
 echo "Show all the comments \n"
 
-cat $PWD/$OUTPUT_FILE_NAME
+#cat $PWD/$OUTPUT_FILE_NAME 
 
 echo "Parse text file"
 
-cat "$PWD/$OUTPUT_FILE_NAME" | "$PWD/jq" '.[] .comments [].text'
+ls -la
+
+cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
 
 #cat $OUTPUT_FILE_NAME | "$PWD/jq" '.[] .comments [].text'
 
