@@ -15,6 +15,13 @@ echo "Downloading JSON Framework \n"
 curl --header 'Host: stedolan.github.io' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' --header 'Accept-Language: en-US,en;q=0.5' --header 'Referer: http://stedolan.github.io/jq/download/' --header 'Connection: keep-alive' 'http://stedolan.github.io/jq/download/linux64/jq' -o $JQ_OUTPUTDIR/jq
 #-L
 
+echo "Nitesh List of Directory \n "
+
+
+echo "************************************ "
+ls
+
+echo "************************************ "
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 chmod +x $JQ_OUTPUTDIR/jq
