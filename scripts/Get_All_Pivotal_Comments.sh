@@ -41,12 +41,14 @@ curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "
 
 #cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text'
 
-echco "Local Variable "
+echo "Local Variable "
 value=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
 echo "$value"
 
-echo "Global Variable"
-$ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
+echo "Global Variable - 1"
+ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
 echo "$ALL_NOTES"
 
+echo "Global Variable - 2"
+echo $ALL_NOTES
 
