@@ -11,7 +11,7 @@
 
 export PROJECT_ID=1114232
 export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-export LABEL_ID=''
+export LABEL_ID='b199'
 export OUTPUT_FILE_NAME='jsonrespone.text'
 
 export ALL_COMMENTS='allcomments.text'
@@ -42,7 +42,7 @@ echo "Show all the comments \n"
 
 #echo "Parse text file"
 
-#ls -la
+ls -la
 #
 #echo "type 1"
 cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
