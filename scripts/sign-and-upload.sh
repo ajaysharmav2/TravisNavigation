@@ -83,18 +83,18 @@ echo "*        Testing for HockeyApp          *"
 #RELEASE_TITLE="UberTestersDemo4.0"
 #
 #
-#echo "***************************"
-#echo "* Uploading to UberTesters  *"
-#echo "***************************"
-#curl  http://beta.ubertesters.com/api/client/upload_build.json \
-#-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
-#-F title="$RELEASE_TITLE" \
-#-F notes="$RELEASE_NOTES" \
-#-F status="in_progress" \
-#-F stop_previous="true" \
-#-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
-#
-#echo "*****  Upload finish *****"
+echo "***************************"
+echo "* Uploading to UberTesters  *"
+echo "***************************"
+curl  http://beta.ubertesters.com/api/client/upload_build.json \
+-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+-F title="$RELEASE_TITLE" \
+-F notes="$ALL_NOTES" \
+-F status="in_progress" \
+-F stop_previous="true" \
+-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
+
+echo "*****  Upload finish *****"
 
 
 # Script for Getting All Comments
@@ -102,13 +102,13 @@ echo "*        Testing for HockeyApp          *"
 
 
 
-echo "***************************"
-echo "* Uploading to UberTesters  *"
-echo "***************************"
-curl http://beta.ubertesters.com/api/client/upload_build.json \
--F file="@$OUTPUTDIR/$APP_NAME.ipa" \
--H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
-echo "Upload finish"
+#echo "***************************"
+#echo "* Uploading to UberTesters  *"
+#echo "***************************"
+#curl http://beta.ubertesters.com/api/client/upload_build.json \
+#-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+#-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
+#echo "Upload finish"
 
 
 

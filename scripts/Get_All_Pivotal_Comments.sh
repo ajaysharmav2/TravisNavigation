@@ -16,7 +16,7 @@ export OUTPUT_FILE_NAME='jsonrespone.text'
 
 export ALL_COMMENTS='allcomments.text'
 
-export ALL_NOTES=""
+
 export LINE="\n"
 if [ ! -z "$INFO_PLIST" ]; then
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $LABEL_ID" "$INFO_PLIST"
