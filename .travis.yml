@@ -19,7 +19,6 @@ before_install:
 - chmod +x config.sh
 
 - chmod +x scripts/download_jq_framwork.sh
-- ./scripts/download_jq_framwork.sh
 - chmod +x scripts/Get_All_Pivotal_Comments.sh
 
 - chmod +x scripts/add-key.sh
@@ -28,6 +27,7 @@ before_install:
 - chmod +x scripts/sign-and-upload.sh
 before_script:
 - . ./config.sh
+- ./scripts/download_jq_framwork.sh
 - echo $APP_NAME
 
 - echo "Testing Branches Nitesh"

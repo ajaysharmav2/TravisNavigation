@@ -36,7 +36,7 @@ RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
 # Get the release notes
 #- ./scripts/Get_All_Pivotal_Comments.sh
-./scripts/Get_All_Pivotal_Comments.sh
+sh ./scripts/Get_All_Pivotal_Comments.sh
 
 #if [ ! -z "$TESTFLIGHT_TEAM_TOKEN" ] && [ ! -z "$TESTFLIGHT_API_TOKEN" ]; then
 #  echo ""
