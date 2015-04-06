@@ -50,7 +50,12 @@ cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
 #cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
 
 
+
+
+#cat $ALL_COMMENTS | awk -F "[" '{print $2}'
+cat $ALL_NOTES | awk -F "[" '{print $2}'
+
 echo "All Filtered Commands"
 
-cat $ALL_COMMENTS | awk -F "[" '{print $2}'
+echo $ALL_NOTES
 

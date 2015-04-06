@@ -33,6 +33,11 @@ zip -r -9 "$OUTPUTDIR/$APP_NAME.app.dsym.zip" "$OUTPUTDIR/$APP_NAME.app.dSYM"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
+
+# Get the release notes
+#- ./scripts/Get_All_Pivotal_Comments.sh
+./scripts/Get_All_Pivotal_Comments.sh
+
 #if [ ! -z "$TESTFLIGHT_TEAM_TOKEN" ] && [ ! -z "$TESTFLIGHT_API_TOKEN" ]; then
 #  echo ""
 #  echo "***************************"
@@ -52,22 +57,22 @@ HOCKEY_APP_ID="a3cd182b137aed43d6f092c0b259544a"
 HOCKEY_APP_TOKEN="759fb41a1d2e440e98d10d0cb022cbe2"
 echo "*        Testing for HockeyApp          *"
 
-if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
-echo ""
-echo "***************************"
-echo "* Uploading to Hockeyapp  *"
-echo "***************************"
-curl  \
--F "status=2" \
--F "notify=0" \
--F "notes=$RELEASE_NOTES" \
--F "notes_type=0" \
--F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
--F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
--H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
-https://rink.hockeyapp.net/api/2/apps/upload
-echo "Upload finish"
-fi
+#if [ ! -z "$HOCKEY_APP_ID" ] && [ ! -z "$HOCKEY_APP_TOKEN" ]; then
+#echo ""
+#echo "***************************"
+#echo "* Uploading to Hockeyapp  *"
+#echo "***************************"
+#curl  \
+#-F "status=2" \
+#-F "notify=0" \
+#-F "notes=$RELEASE_NOTES" \
+#-F "notes_type=0" \
+#-F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
+#-F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
+#-H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
+#https://rink.hockeyapp.net/api/2/apps/upload
+#echo "Upload finish"
+#fi
 
 #{"title":"Travis Test","bundle_identifier":"com.travis.travisnavigation","public_identifier":"a3cd182b137aed43d6f092c0b259544a","platform":"iOS","release_type":0,"custom_release_type":null,"created_at":"2015-03-02T09:11:57Z","updated_at":"2015-03-09T14:48:23Z","featured":false,"id":150444,"config_url":"https://rink.hockeyapp.net/manage/apps/150444/app_versions/2","public_url":"https://rink.hockeyapp.net/apps/a3cd182b137aed43d6f092c0b259544a","minimum_os_version":"7.0","device_family":"iPhone/iPod","status":2,"owner":"Backup Data","owner_token":"368b1383c024a45f61476ee1371b26494137c339"}
 
@@ -104,15 +109,6 @@ curl http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
 -H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
 echo "Upload finish"
-#
-#***************************
-#
-#* Uploading to UberTesters *
-#
-#***************************
-#
-#{"success":true,"revision":{"platform":"iOS","application_id":"com.travis.travisnavigation","build_number":"1","created_at":"2015-03-10T08:06:38Z","title":"","notes":null,"size":1986631,"sdk_version":70,"min_os_version":"7.0","target_os_version":null,"project":"V2Demo Ubertesters / DemoUbertesters","status":"In progress","started_at":"2015-03-10T08:06:40Z","notify":true,"distribution_groups":[],"stop_previous":false}}curl: (6) Could not resolve host: echo
-#
-#curl: (6) Could not resolve host: Upload finish
+
 
 
