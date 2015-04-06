@@ -93,17 +93,17 @@ fi
 
 
 # Script for Getting All Comments
-- ./scripts/Get_All_Pivotal_Comments.sh
+#- ./scripts/Get_All_Pivotal_Comments.sh
 
 
 
-#echo "***************************"
-#echo "* Uploading to UberTesters  *"
-#echo "***************************"
-#curl http://beta.ubertesters.com/api/client/upload_build.json \
-#-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
-#-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
-#echo "Upload finish"
+echo "***************************"
+echo "* Uploading to UberTesters  *"
+echo "***************************"
+curl http://beta.ubertesters.com/api/client/upload_build.json \
+-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
+-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
+echo "Upload finish"
 #
 #***************************
 #
