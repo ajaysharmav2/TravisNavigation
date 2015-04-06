@@ -55,7 +55,7 @@ while read line
 do
 ALL_NOTES=$ALL_NOTES$LINE$line
 #echo $line
-done <$PWD/finalcomments.text
+done <$PWD/ALL_COMMENTS
 echo "\n\nAll Text"
 echo $ALL_NOTES
 
