@@ -16,7 +16,8 @@ export OUTPUT_FILE_NAME='jsonrespone.text'
 
 export ALL_COMMENTS='allcomments.text'
 
-
+export ALL_NOTES=""
+export LINE="\n"
 if [ ! -z "$INFO_PLIST" ]; then
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $LABEL_ID" "$INFO_PLIST"
 echo "Set CFBundleVersion to $LABEL_ID"
@@ -42,10 +43,21 @@ echo "Show all the comments \n"
 
 #echo "Parse text file"
 
-ls -la
+#ls -la
 #
 #echo "type 1"
 cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
+
+
+chmod +x $PWD/$ALL_COMMENTS
+
+while read line
+do
+ALL_NOTES=$ALL_NOTES$LINE$line
+#echo $line
+done <$PWD/finalcomments.text
+echo "\n\nAll Text"
+echo $ALL_NOTES
 
 #cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
 
@@ -54,8 +66,8 @@ cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] .comments [].text' > $ALL_COMMENTS
 
 #cat $ALL_COMMENTS | awk -F "[" '{print $2}'
 
-$ALL_NOTES=($ALL_COMMENTS | awk -F "[" '{print $2}')
-echo "All Filtered Commands"
-
-echo $ALL_NOTES
+#$ALL_NOTES=($ALL_COMMENTS | awk -F "[" '{print $2}')
+#echo "All Filtered Commands"
+#
+#echo $ALL_NOTES
 
