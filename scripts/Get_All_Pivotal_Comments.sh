@@ -46,7 +46,7 @@ curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "
 #echo "$value"
 
 echo "Global Variable - 1"
-export ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
+ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
 #echo "$ALL_NOTES"
 
 #echo "Global Variable - 2"

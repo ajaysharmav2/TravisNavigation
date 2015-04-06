@@ -95,7 +95,7 @@ echo ALL_NOTES
 curl  http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
 -F title="$RELEASE_TITLE" \
--F "notes=$ALL_NOTES" \
+-F notes="$ALL_NOTES" \
 -F status="in_progress" \
 -F stop_previous="true" \
 -H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
