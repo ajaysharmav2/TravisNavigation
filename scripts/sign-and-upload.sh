@@ -78,6 +78,8 @@ echo "*        Testing for HockeyApp          *"
 
 #PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
 
+echo "Global Variable - 1"
+$ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
 
 
 #RELEASE_TITLE="UberTestersDemo4.0"
@@ -85,7 +87,7 @@ echo "*        Testing for HockeyApp          *"
 #
 echo "***************************"
 echo "* Uploading to UberTesters  *"
-echo ALL_NOTES
+echo $ALL_NOTES
 echo "***************************"
 curl  http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
