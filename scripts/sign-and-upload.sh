@@ -85,6 +85,7 @@ echo "*        Testing for HockeyApp          *"
 #
 echo "***************************"
 echo "* Uploading to UberTesters  *"
+echo $ALL_NOTES
 echo "***************************"
 curl  http://beta.ubertesters.com/api/client/upload_build.json \
 -F file="@$OUTPUTDIR/$APP_NAME.ipa" \
