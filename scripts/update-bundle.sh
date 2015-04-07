@@ -19,3 +19,4 @@ if [ ! -z "$BUNDLE_DISPLAY_NAME" ]; then
 /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $BUNDLE_DISPLAY_NAME" "$INFO_PLIST"
 echo "Set CFBundleDisplayName to $BUNDLE_DISPLAY_NAME"
 fi
+

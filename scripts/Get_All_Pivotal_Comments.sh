@@ -24,8 +24,10 @@ export LABEL_ID='b199'
 #fi
 
 echo "MY App Version"
-echo "$TRAVIS_BUILD_NUMBER"
+#echo "$TRAVIS_BUILD_NUMBER"
 
+echo $CFBundleVersion
+echo CFBundleVersion
 
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
