@@ -11,10 +11,12 @@
 
 export PROJECT_ID=1114232
 export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-export LABEL_ID='b199'
-#export OUTPUT_FILE_NAME='jsonrespone.text'
-#
-#export ALL_COMMENTS='allcomments.text'
+#export LABEL_ID='b199'
+
+
+LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${PROJECT_DIR}/${INFOPLIST_FILE}")
+echo "MY App Version"
+echo $LABEL_ID
 
 
 #export LINE="\n"
@@ -23,11 +25,8 @@ export LABEL_ID='b199'
 #echo "Set CFBundleVersion to $LABEL_ID"
 #fi
 
-echo "MY App Version"
-#echo "$TRAVIS_BUILD_NUMBER"
 
-echo $CFBundleVersion
-echo CFBundleVersion
+
 
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
