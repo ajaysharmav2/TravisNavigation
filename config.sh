@@ -17,6 +17,9 @@ export PROFILE_NAME="AppNavigation_Ad_Hoc"
 #export secure: FgT/A59Qckv18O35eeiBl2F54OpISOQGOcppLQ2pFDNqiTuOlnX2acGYJcigR2TWQvjQJ9xGYB4AecLQEtCNyDYEL/7IyI/AMtGrX3o1JrxVwo9ZTEhD9sBFHuT0n/g2DPiVb/jxwJItg7yQNOocsILcROiF2oHmV1G4phRCKe4=
 export PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
 #export ALL_NOTES='-'
+export OUTPUT_FILE_NAME='jsonrespone.text'
+
+export ALL_COMMENTS='allcomments.text'
 
 
 
