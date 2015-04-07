@@ -33,6 +33,9 @@ zip -r -9 "$OUTPUTDIR/$APP_NAME.app.dsym.zip" "$OUTPUTDIR/$APP_NAME.app.dSYM"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
+echo "MY App Version"
+echo "$TRAVIS_BUILD_NUMBER"
+
 echo "Global Variable - 1"
 ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
 
@@ -119,6 +122,6 @@ echo "*****  Upload finish *****"
 #-F file="@$OUTPUTDIR/$APP_NAME.ipa" \
 #-H "X-UbertestersApiKey:$PERSONAL_API_KEY" \
 #echo "Upload finish"
-
+#{"success":true,"revision":{"platform":"iOS","application_id":"com.travis.travisnavigation","build_number":"2.0","created_at":"2015-03-10T09:31:14Z","title":"UberTestersDemo2.0","notes":"Build: 29\\nUploaded: 2015-03-10 09:22:00","size":1986804,"sdk_version":70,"min_os_version":"7.0","target_os_version":null,"project":"V2Demo Ubertesters / DemoUbertesters","status":"In progress","started_at":"2015-03-10T09:31:14Z","notify":true,"distribution_groups":[],"stop_previous":true}}Upload finish
 
 

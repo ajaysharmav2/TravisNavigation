@@ -17,11 +17,15 @@ export LABEL_ID='b199'
 #export ALL_COMMENTS='allcomments.text'
 
 
-export LINE="\n"
-if [ ! -z "$INFO_PLIST" ]; then
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $LABEL_ID" "$INFO_PLIST"
-echo "Set CFBundleVersion to $LABEL_ID"
-fi
+#export LINE="\n"
+#if [ ! -z "$INFO_PLIST" ]; then
+#/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $LABEL_ID" "$INFO_PLIST"
+#echo "Set CFBundleVersion to $LABEL_ID"
+#fi
+
+echo "MY App Version"
+echo "$TRAVIS_BUILD_NUMBER"
+
 
 curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
