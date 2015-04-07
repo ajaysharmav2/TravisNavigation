@@ -26,11 +26,18 @@ echo "Set CFBundleVersion to $ALPHA_VERSION"
 fi
 
 echo "Versions details "
-APP_PLIST = Info.plist
-PLIST_BUDDY = /usr/libexec/PlistBuddy
+#APP_PLIST = Info.plist
+#PLIST_BUDDY = /usr/libexec/PlistBuddy
+#
+#echo $ALPHA_VERSION
+#echo ALPHA_VERSION
+#BUNDLE_VERSION = $(shell $(PLIST_BUDDY) -c "Print CFBundleVersion" $(APP_PLIST))
+#echo $BUNDLE_VERSION
+#echo BUNDLE_VERSION
 
-echo $ALPHA_VERSION
-echo ALPHA_VERSION
-BUNDLE_VERSION = $(shell $(PLIST_BUDDY) -c "Print CFBundleVersion" $(APP_PLIST))
-echo $BUNDLE_VERSION
-echo BUNDLE_VERSION
+
+VERSIONNUM=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${PROJECT_DIR}/${INFOPLIST_FILE}")
+NEWSUBVERSION=`echo $VERSIONNUM | awk -F "." '{print $3}'`
+NEWSUBVERSION=$(($NEWSUBVERSION + 1))
+NEWVERSIONSTRING=`echo $VERSIONNUM | awk -F "." '{print $1 "." $2 ".'$NEWSUBVERSION'" }'`
+/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $NEWVERSIONSTRING" "${PROJECT_DIR}/${INFOPLIST_FILE}"
