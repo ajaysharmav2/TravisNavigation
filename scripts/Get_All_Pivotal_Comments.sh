@@ -12,9 +12,11 @@
 export PROJECT_ID=1114232
 export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
 #export LABEL_ID='b199'
+export OUTPUT_FILE_NAME='jsonrespone.text'
 
+export ALL_COMMENTS='allcomments.text'
 
-LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${PROJECT_DIR}/${INFOPLIST_FILE}")
+LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$APP_WORKSPACE_PATH/$INFOPLIST_FILE")
 echo "MY App Version"
 echo $LABEL_ID
 
