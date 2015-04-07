@@ -16,7 +16,10 @@ export OUTPUT_FILE_NAME='jsonrespone.text'
 
 export ALL_COMMENTS='allcomments.text'
 
-LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$APP_WORKSPACE_PATH/$INFOPLIST_FILE")
+echo "PATH info plist"
+echo $PWD/$INFOPLIST_FILE
+
+LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$PWD/$INFOPLIST_FILE")
 echo "MY App Version"
 echo $LABEL_ID
 
