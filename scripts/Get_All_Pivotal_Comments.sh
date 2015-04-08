@@ -12,9 +12,9 @@
 #export PROJECT_ID=1114232
 #export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
 #export LABEL_ID='b199'
-export OUTPUT_FILE_NAME='jsonrespone.text'
-
-export ALL_COMMENTS='allcomments.text'
+#export OUTPUT_FILE_NAME='jsonrespone.text'
+#
+#export ALL_COMMENTS='allcomments.text'
 
 export LABEL_ID=''
 
