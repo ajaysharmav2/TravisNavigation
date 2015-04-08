@@ -31,15 +31,20 @@ xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTP
 zip -r -9 "$OUTPUTDIR/$APP_NAME.app.dsym.zip" "$OUTPUTDIR/$APP_NAME.app.dSYM"
 
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
-RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
 
 
 echo "Global Variable - 1"
-ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | {name: .name, id: .id}'`
+
+ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | .id, .name'`
+
+echo $ALL_NOTES | awk -F '\n' '{print $1, $2}'
 
 echo $ALL_NOTES
 
+RELEASE_NOTES="$ALL_NOTES\nTravis Integration Build: $TRAVIS_BUILD_NUMBER"
+
+#ALL_NOTES=`cat $PWD/$OUTPUT_FILE_NAME | $PWD/jq '.[] | .id, .name' | awk -F '\n' {print $1, $2}`
 # Get the release notes
 #- ./scripts/Get_All_Pivotal_Comments.sh
 #sh ./scripts/Get_All_Pivotal_Comments.sh
