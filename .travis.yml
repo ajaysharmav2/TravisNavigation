@@ -9,7 +9,7 @@ env:
 #  - ALL_NOTES=""
 #  - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
 #  - PROFILE_NAME="AppNavigation_Ad_Hoc"
-  - INFOPLIST_FILE="Info.plist"
+  - INFOPLIST_FILE="./AppNavigation/Info.plist"
 #  - APP_WORKSPACE_PATH="TravisNavigation/AppNavigation.xcworkspace"
   - secure: bJ1sFGf/q3CxKbYcVwOti+TVwokrcgJ5PVfDpgugeAEPNyweBux4cWI6YvLp1WJIO0velz9WjWwKcQLHIb+wDF9uzoT1OHeMjTsMSEYxm+pGdQmOvZHbfFFw3Jaw3KqjIefRK+SCRMgfS2uwxLNzuz7N8immstVNLIeYFZ6AUYY=
   - secure: Yn47yJidwCJefFnfS9urATW1LUHV6ErvApOyp5Qbhg4xnhZjQyibjln50/3e/sZBSp8gtCfx9QkUwLoBWxTTX4W4CmdvWK04EMc7qq0n9Xk2TdfR/+26YldI9Sx6aAWpaSYCvJ8EnJ47U5tjHo17CIHiijwyWJGYBA8xZ3B604k=
