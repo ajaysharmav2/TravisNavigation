@@ -13,6 +13,7 @@ curl --header 'Host: stedolan.github.io' --header 'Accept: text/html,application
 
 echo $JQ_OUTPUTDIR
 
+
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 chmod +x $JQ_OUTPUTDIR/jq
