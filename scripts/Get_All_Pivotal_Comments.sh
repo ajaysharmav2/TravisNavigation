@@ -23,6 +23,11 @@ LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$PWD/$INFOPLIST_F
 echo "MY App Version"
 echo $LABEL_ID
 
+if [ ! -z "$INFO_PLIST" ]; then
+LABEL_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$INFO_PLIST"
+#echo "Set CFBundleVersion to $TRAVIS_BUILD_NUMBER"
+fi
+
 
 #export LINE="\n"
 #if [ ! -z "$INFO_PLIST" ]; then
