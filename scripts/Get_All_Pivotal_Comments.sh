@@ -7,16 +7,9 @@
 #  Copyright (c) 2014 ___v2Tech Ventures___. All rights reserved.
 #!/bin/sh
 
-
-
-#export PROJECT_ID=1114232
-#export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-#export LABEL_ID='b199'
-#export OUTPUT_FILE_NAME='jsonrespone.text'
-#
-#export ALL_COMMENTS='allcomments.text'
-
 export LABEL_ID=''
+export OUTPUT_FILE_NAME='jsonrespone.text'
+export ALL_COMMENTS='allcomments.text'
 
 echo "PATH info plist"
 echo $INFOPLIST_FILE
@@ -27,10 +20,9 @@ if [ ! -z "$INFOPLIST_FILE" ]; then
    LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" $INFOPLIST_FILE`
 
 fi
-#build/Release-iphoneos/AppNavigation.app/Info.plist
 echo $LABEL_ID
 echo LABEL_ID
 
-curl -X GET -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
+curl -X GET -H "X-TrackerToken: $PIVOTAL_TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PIVOTAL_PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
 

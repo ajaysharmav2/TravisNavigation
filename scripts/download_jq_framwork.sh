@@ -1,8 +1,13 @@
 
-#export PROJECT_ID=1114232
-#export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
+#!/bin/sh
+
+#  Get_All_Pivotal_Comments.sh
 #
-#curl -X GET -H "X-TrackerToken: cf9391f2af5a2b68da2755a27bce2bff" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/1114232/stories?date_format=millis&with_label=b104"
+#
+#  Created by Nitesh Meshram on 16/03/15.
+#  Copyright (c) 2014 ___v2Tech Ventures___. All rights reserved.
+#!/bin/sh
+
 
 export JQ_OUTPUTDIR="$PWD"
 
@@ -16,13 +21,5 @@ echo $JQ_OUTPUTDIR
 # Chaning permission of JSON Framework
 echo "Chaning permission of JSON Framework \n"
 chmod +x $JQ_OUTPUTDIR/jq
-#chmod 777 $JQ_OUTPUTDIR/jq
-
-ls -la
-#
-#
-## Moving JSON Framework
-#echo "Moving JSON Framework \n"
-#sudo cp $JQ_OUTPUTDIR/jq /usr/local/bin/
 #
 

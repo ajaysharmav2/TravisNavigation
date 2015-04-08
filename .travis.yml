@@ -6,19 +6,14 @@ only:
 
 env:
   global:
-#  - ALL_NOTES=""
-#  - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
-#  - PROFILE_NAME="AppNavigation_Ad_Hoc"
   - INFOPLIST_FILE="./AppNavigation/Info.plist"
-#  - APP_WORKSPACE_PATH="TravisNavigation/AppNavigation.xcworkspace"
   - secure: bJ1sFGf/q3CxKbYcVwOti+TVwokrcgJ5PVfDpgugeAEPNyweBux4cWI6YvLp1WJIO0velz9WjWwKcQLHIb+wDF9uzoT1OHeMjTsMSEYxm+pGdQmOvZHbfFFw3Jaw3KqjIefRK+SCRMgfS2uwxLNzuz7N8immstVNLIeYFZ6AUYY=
   - secure: Yn47yJidwCJefFnfS9urATW1LUHV6ErvApOyp5Qbhg4xnhZjQyibjln50/3e/sZBSp8gtCfx9QkUwLoBWxTTX4W4CmdvWK04EMc7qq0n9Xk2TdfR/+26YldI9Sx6aAWpaSYCvJ8EnJ47U5tjHo17CIHiijwyWJGYBA8xZ3B604k=
   - secure: jtwbKzVZMluFd60R9v2mbi91kn0muHObiYvVqQZxjDN9VJ5FdM0J3W2k9d0EIBwfkcvzVPLApXlJfE9M34Y/CuXs/mBh2OxMXbUSx46AR4BE8Z9q2XFOt/de9B5O3JGs1JCiCMlbESSpyGJdLBjvb+ixOwmNtmux2NykZPw+lvA=
   - secure: FgT/A59Qckv18O35eeiBl2F54OpISOQGOcppLQ2pFDNqiTuOlnX2acGYJcigR2TWQvjQJ9xGYB4AecLQEtCNyDYEL/7IyI/AMtGrX3o1JrxVwo9ZTEhD9sBFHuT0n/g2DPiVb/jxwJItg7yQNOocsILcROiF2oHmV1G4phRCKe4=
-  - PROJECT_ID=1114232
-  - TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-  - OUTPUT_FILE_NAME='jsonrespone.text'
-  - ALL_COMMENTS='allcomments.text'
+  - PIVOTAL_PROJECT_ID=1114232
+  - PIVOTAL_TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
+  
 
 before_install:
 - chmod +x config.sh
@@ -46,8 +41,7 @@ before_script:
 - ./scripts/add-key.sh
 - ./scripts/update-bundle.sh
 script:
-#- xcodebuild test -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-#- xcodebuild -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
 - xcodebuild -workspace AppNavigation.xcworkspace -scheme AppNavigation -sdk iphoneos
   -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 after_success:
