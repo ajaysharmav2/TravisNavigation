@@ -19,11 +19,11 @@
 export LABEL_ID=''
 
 echo "PATH info plist"
-echo $INFO_PLIST
+echo $INFOPLIST_FILE
 
 
 # 'b is label prefix coded as standard prefix for all project'
-if [ ! -z "$INFO_PLIST" ]; then
+if [ ! -z "$INFOPLIST_FILE" ]; then
    LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" $INFOPLIST_FILE`
 
 fi
