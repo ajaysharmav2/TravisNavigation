@@ -9,12 +9,13 @@
 
 
 
-export PROJECT_ID=1114232
-export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
+#export PROJECT_ID=1114232
+#export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
 #export LABEL_ID='b199'
-export OUTPUT_FILE_NAME='jsonrespone.text'
+#export OUTPUT_FILE_NAME='jsonrespone.text'
+#
+#export ALL_COMMENTS='allcomments.text'
 
-export ALL_COMMENTS='allcomments.text'
 export LABEL_ID=''
 
 echo "PATH info plist"
@@ -23,7 +24,7 @@ echo $INFO_PLIST
 
 # 'b is label prefix coded as standard prefix for all project'
 if [ ! -z "$INFO_PLIST" ]; then
-   LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" $INFO_PLIST`
+   LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" $INFOPLIST_FILE`
 
 fi
 
