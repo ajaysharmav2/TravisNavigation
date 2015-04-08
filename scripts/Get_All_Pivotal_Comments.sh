@@ -14,7 +14,7 @@
 #export LABEL_ID='b199'
 #export OUTPUT_FILE_NAME='jsonrespone.text'
 #
-#export ALL_COMMENTS='allcomments.text'
+#export ALL_COMMENTS='allcomments.text' Check this
 
 export LABEL_ID=''
 
