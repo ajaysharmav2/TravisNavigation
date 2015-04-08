@@ -10,8 +10,8 @@
 
 
 export JQ_OUTPUTDIR="$PWD"
-
-export PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
+#
+#export PERSONAL_API_KEY="6c1b9810a91801321dcc22000ac44c54"
 
 curl --header 'Host: stedolan.github.io' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' --header 'Accept-Language: en-US,en;q=0.5' --header 'Referer: http://stedolan.github.io/jq/' --header 'Connection: keep-alive' 'http://stedolan.github.io/jq/download/osx64/jq' -o $JQ_OUTPUTDIR/jq
 
