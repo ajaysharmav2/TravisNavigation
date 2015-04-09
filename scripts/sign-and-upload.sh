@@ -21,6 +21,9 @@
 #exit 0
 #fi
 
+#/Users/travis/Library/MobileDevice/Provisioning Profiles/Distribution.mobileprovision
+#/Users/travis/build/v2dev/LT-MoneyCenter-iOS/build/DEV-iphoneos
+
 # Thanks @djacobs https://gist.github.com/djacobs/2411095
 # Thanks @johanneswuerbach https://gist.github.com/johanneswuerbach/5559514
 
