@@ -27,15 +27,19 @@ echo $INFOPLIST_FILE
 # 'b is label prefix coded as standard prefix for all project'
 if [ ! -z "$INFOPLIST_FILE" ]; then
    LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" $INFOPLIST_FILE`
+    echo "My Info.plist Var = "$LABEL_ID
 
 fi
-#build/Release-iphoneos/AppNavigation.app/Info.plist
-echo $LABEL_ID
-echo LABEL_ID
 
+if [ ! -z "$INFO_PLIST" ]; then
+    LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$INFO_PLIST"`
+    echo "System Info.plist Var = "$LABEL_ID
+
+    echo $INFO_PLIST
+
+fi
+
+LABEL_ID=b201
 curl -X GET -H "X-TrackerToken: $PIVOTAL_TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PIVOTAL_PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
 
-if ([ "$TRAVIS_BRANCH"  = "develop" ]); then
-LABEL_ID=b200
-fi
