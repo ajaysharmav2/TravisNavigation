@@ -17,8 +17,8 @@ env:
   - secure: FgT/A59Qckv18O35eeiBl2F54OpISOQGOcppLQ2pFDNqiTuOlnX2acGYJcigR2TWQvjQJ9xGYB4AecLQEtCNyDYEL/7IyI/AMtGrX3o1JrxVwo9ZTEhD9sBFHuT0n/g2DPiVb/jxwJItg7yQNOocsILcROiF2oHmV1G4phRCKe4=
   - PIVOTAL_PROJECT_ID=1114232
   - PIVOTAL_TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-  - OUTPUT_FILE_NAME='jsonrespone.text'
-  - ALL_COMMENTS='allcomments.text'
+#- OUTPUT_FILE_NAME='jsonrespone.text'
+#  - ALL_COMMENTS='allcomments.text'
 
 before_install:
 - chmod +x config.sh

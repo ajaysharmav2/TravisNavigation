@@ -7,16 +7,8 @@
 #  Copyright (c) 2014 ___v2Tech Ventures___. All rights reserved.
 #!/bin/sh
 
+export OUTPUT_FILE_NAME='jsonrespone.text'
 
-
-#export PROJECT_ID=1114232
-#export TOKEN='cf9391f2af5a2b68da2755a27bce2bff'
-#export LABEL_ID='b199'
-#export OUTPUT_FILE_NAME='jsonrespone.text'
-#
-#export ALL_COMMENTS='allcomments.text'
-
-#Check this
 
 export LABEL_ID=''
 
@@ -43,3 +35,6 @@ LABEL_ID=b201
 curl -X GET -H "X-TrackerToken: $PIVOTAL_TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" "https://www.pivotaltracker.com/services/v5/projects/$PIVOTAL_PROJECT_ID/stories?with_label=$LABEL_ID" -o $PWD/$OUTPUT_FILE_NAME
 
 
+#/Users/nitesh.meshram/Documents/v2Apps/LT-MoneyCenter-iOS/Money Center/Money Center/Money Center-Info.plist
+
+#/Money Center/Money Center/Money Center-Info.plist
